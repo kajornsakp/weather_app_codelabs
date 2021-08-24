@@ -44,17 +44,31 @@ class HomePage extends StatelessWidget {
                           Text("It's sunny"),
                         ],
                       ),
-                      Image.asset("assets/bigsun.png")
+                      Spacer(),
+                      Image.asset(
+                        "assets/bigsun.png",
+                        width: 72,
+                        height: 72,
+                      )
                     ],
                   ),
                   Row(
                     children: [
-                      Text("40 c"),
-                      Text("40 / 33"),
+                      Text("40° c"),
+                      Text("40° / 33°"),
                     ],
                   ),
-                  Text("El Dakhla Oasis, Egypt"),
-                  Text("Sunset 8:19 PM"),
+                  Row(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("El Dakhla Oasis, Egypt"),
+                          Text("Sunset 8:19 PM"),
+                        ],
+                      ),
+                    ],
+                  ),
                   Spacer(),
                   ClipRect(
                     child: BackdropFilter(
@@ -73,8 +87,15 @@ class HomePage extends StatelessWidget {
                                   Text('Today'),
                                   Text('Tomorrow'),
                                   Spacer(),
-                                  Image.asset('assets/refresh.png')
+                                  Image.asset(
+                                    'assets/refresh.png',
+                                    width: 16,
+                                    height: 16,
+                                  )
                                 ],
+                              ),
+                              SizedBox(
+                                height: 30,
                               ),
                               SingleChildScrollView(
                                 scrollDirection: Axis.horizontal,
@@ -83,51 +104,116 @@ class HomePage extends StatelessWidget {
                                     Column(
                                       children: [
                                         Text("12:00"),
-                                        Image.asset('assets/sunny.png'),
-                                        Text("40")
+                                        SizedBox(height: 20),
+                                        Image.asset(
+                                          'assets/sunny.png',
+                                          width: 28,
+                                          height: 28,
+                                        ),
+                                        SizedBox(height: 12),
+                                        Text("40°")
                                       ],
+                                    ),
+                                    SizedBox(
+                                      width: 24,
                                     ),
                                     Column(
                                       children: [
                                         Text("13:00"),
-                                        Image.asset('assets/sunny.png'),
-                                        Text("40")
+                                        SizedBox(height: 20),
+                                        Image.asset(
+                                          'assets/sunny.png',
+                                          width: 28,
+                                          height: 28,
+                                        ),
+                                        SizedBox(height: 12),
+                                        Text("40°")
                                       ],
+                                    ),
+                                    SizedBox(
+                                      width: 24,
                                     ),
                                     Column(
                                       children: [
                                         Text("14:00"),
-                                        Image.asset('assets/sunny.png'),
-                                        Text("40")
+                                        SizedBox(height: 20),
+                                        Image.asset(
+                                          'assets/sunny.png',
+                                          width: 28,
+                                          height: 28,
+                                        ),
+                                        SizedBox(height: 12),
+                                        Text("40°")
                                       ],
+                                    ),
+                                    SizedBox(
+                                      width: 24,
                                     ),
                                     Column(
                                       children: [
                                         Text("15:00"),
-                                        Image.asset('assets/sunny.png'),
-                                        Text("40")
+                                        SizedBox(height: 20),
+                                        Image.asset(
+                                          'assets/sunny.png',
+                                          width: 28,
+                                          height: 28,
+                                        ),
+                                        SizedBox(height: 12),
+                                        Text("40°")
                                       ],
+                                    ),
+                                    SizedBox(
+                                      width: 24,
                                     ),
                                     Column(
                                       children: [
                                         Text("16:00"),
-                                        Image.asset('assets/sunny.png'),
-                                        Text("40")
+                                        SizedBox(height: 20),
+                                        Image.asset(
+                                          'assets/sunny.png',
+                                          width: 28,
+                                          height: 28,
+                                        ),
+                                        SizedBox(height: 12),
+                                        Text("40°")
                                       ],
+                                    ),
+                                    SizedBox(
+                                      width: 24,
                                     ),
                                     Column(
                                       children: [
                                         Text("17:00"),
-                                        Image.asset('assets/sunny.png'),
-                                        Text("40")
+                                        SizedBox(height: 20),
+                                        Image.asset(
+                                          'assets/sunny.png',
+                                          width: 28,
+                                          height: 28,
+                                        ),
+                                        SizedBox(height: 12),
+                                        Text("40°")
                                       ],
                                     ),
+                                    SizedBox(
+                                      width: 24,
+                                    ),
+                                    Column(
+                                      children: [
+                                        Text("18:00"),
+                                        SizedBox(height: 20),
+                                        Image.asset(
+                                          'assets/sunny.png',
+                                          width: 28,
+                                          height: 28,
+                                        ),
+                                        SizedBox(height: 12),
+                                        Text("40°")
+                                      ],
+                                    )
                                   ],
                                 ),
                               ),
                               Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   Column(
                                     crossAxisAlignment:
@@ -136,11 +222,17 @@ class HomePage extends StatelessWidget {
                                       Row(
                                         children: [
                                           Text("Wind"),
-                                          Image.asset('assets/windy.png')
+                                          Image.asset(
+                                            'assets/windy.png',
+                                            height: 16,
+                                          )
                                         ],
                                       ),
                                       Text("8km/h")
                                     ],
+                                  ),
+                                  SizedBox(
+                                    width: 60,
                                   ),
                                   Column(
                                     crossAxisAlignment:
@@ -149,7 +241,10 @@ class HomePage extends StatelessWidget {
                                       Row(
                                         children: [
                                           Text("Humidity"),
-                                          Image.asset('assets/humidity.png')
+                                          Image.asset(
+                                            'assets/humidity.png',
+                                            height: 16,
+                                          )
                                         ],
                                       ),
                                       Text("24%"),
