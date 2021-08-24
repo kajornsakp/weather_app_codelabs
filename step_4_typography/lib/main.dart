@@ -13,8 +13,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+          fontFamily: 'Metropolis',
           primarySwatch: Colors.blue,
-          textTheme: TextTheme(bodyText2: TextStyle(color: Colors.white))),
+          textTheme: TextTheme(
+              bodyText2:
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold))),
       home: HomePage(),
     );
   }
@@ -40,8 +43,12 @@ class HomePage extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("WED, 01 April"),
-                          Text("It's sunny"),
+                          Text("WED, 01 April",
+                              style: TextStyle(
+                                  fontSize: 28, fontWeight: FontWeight.w800)),
+                          Text("It's sunny",
+                              style: TextStyle(
+                                  fontSize: 28, fontWeight: FontWeight.w200)),
                         ],
                       ),
                       Spacer(),
@@ -52,10 +59,24 @@ class HomePage extends StatelessWidget {
                       )
                     ],
                   ),
+                  SizedBox(
+                    height: 40,
+                  ),
                   Row(
+                    crossAxisAlignment: CrossAxisAlignment.baseline,
+                    textBaseline: TextBaseline.alphabetic,
                     children: [
-                      Text("40° c"),
-                      Text("40° / 33°"),
+                      Text(
+                        "40°c",
+                        style: TextStyle(
+                            fontSize: 84,
+                            fontWeight: FontWeight.w200,
+                            height: 1),
+                      ),
+                      SizedBox(width: 12),
+                      Text("40° / 33°",
+                          style: TextStyle(
+                              fontSize: 24, fontWeight: FontWeight.w200)),
                     ],
                   ),
                   Row(
@@ -63,8 +84,13 @@ class HomePage extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("El Dakhla Oasis, Egypt"),
-                          Text("Sunset 8:19 PM"),
+                          Text("El Dakhla Oasis, Egypt",
+                              style: TextStyle(fontSize: 20)),
+                          SizedBox(
+                            height: 8,
+                          ),
+                          Text("Sunset 8:19 PM",
+                              style: TextStyle(fontSize: 12)),
                         ],
                       ),
                     ],
@@ -84,8 +110,15 @@ class HomePage extends StatelessWidget {
                             children: [
                               Row(
                                 children: [
-                                  Text('Today'),
-                                  Text('Tomorrow'),
+                                  Text('Today', style: TextStyle(fontSize: 20)),
+                                  SizedBox(
+                                    width: 8,
+                                  ),
+                                  Text('Tomorrow',
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          color:
+                                              Colors.white.withOpacity(0.7))),
                                   Spacer(),
                                   Image.asset(
                                     'assets/refresh.png',
@@ -101,117 +134,43 @@ class HomePage extends StatelessWidget {
                                 scrollDirection: Axis.horizontal,
                                 child: Row(
                                   children: [
-                                    Column(
-                                      children: [
-                                        Text("12:00"),
-                                        SizedBox(height: 20),
-                                        Image.asset(
-                                          'assets/sunny.png',
-                                          width: 28,
-                                          height: 28,
-                                        ),
-                                        SizedBox(height: 12),
-                                        Text("40°")
-                                      ],
-                                    ),
+                                    HourlyPrediction(
+                                        time: "12:00", temp: "40°"),
                                     SizedBox(
                                       width: 24,
                                     ),
-                                    Column(
-                                      children: [
-                                        Text("13:00"),
-                                        SizedBox(height: 20),
-                                        Image.asset(
-                                          'assets/sunny.png',
-                                          width: 28,
-                                          height: 28,
-                                        ),
-                                        SizedBox(height: 12),
-                                        Text("40°")
-                                      ],
-                                    ),
+                                    HourlyPrediction(
+                                        time: "13:00", temp: "40°"),
                                     SizedBox(
                                       width: 24,
                                     ),
-                                    Column(
-                                      children: [
-                                        Text("14:00"),
-                                        SizedBox(height: 20),
-                                        Image.asset(
-                                          'assets/sunny.png',
-                                          width: 28,
-                                          height: 28,
-                                        ),
-                                        SizedBox(height: 12),
-                                        Text("40°")
-                                      ],
-                                    ),
+                                    HourlyPrediction(
+                                        time: "14:00", temp: "40°"),
                                     SizedBox(
                                       width: 24,
                                     ),
-                                    Column(
-                                      children: [
-                                        Text("15:00"),
-                                        SizedBox(height: 20),
-                                        Image.asset(
-                                          'assets/sunny.png',
-                                          width: 28,
-                                          height: 28,
-                                        ),
-                                        SizedBox(height: 12),
-                                        Text("40°")
-                                      ],
-                                    ),
+                                    HourlyPrediction(
+                                        time: "15:00", temp: "40°"),
                                     SizedBox(
                                       width: 24,
                                     ),
-                                    Column(
-                                      children: [
-                                        Text("16:00"),
-                                        SizedBox(height: 20),
-                                        Image.asset(
-                                          'assets/sunny.png',
-                                          width: 28,
-                                          height: 28,
-                                        ),
-                                        SizedBox(height: 12),
-                                        Text("40°")
-                                      ],
-                                    ),
+                                    HourlyPrediction(
+                                        time: "16:00", temp: "40°"),
                                     SizedBox(
                                       width: 24,
                                     ),
-                                    Column(
-                                      children: [
-                                        Text("17:00"),
-                                        SizedBox(height: 20),
-                                        Image.asset(
-                                          'assets/sunny.png',
-                                          width: 28,
-                                          height: 28,
-                                        ),
-                                        SizedBox(height: 12),
-                                        Text("40°")
-                                      ],
-                                    ),
+                                    HourlyPrediction(
+                                        time: "17:00", temp: "40°"),
                                     SizedBox(
                                       width: 24,
                                     ),
-                                    Column(
-                                      children: [
-                                        Text("18:00"),
-                                        SizedBox(height: 20),
-                                        Image.asset(
-                                          'assets/sunny.png',
-                                          width: 28,
-                                          height: 28,
-                                        ),
-                                        SizedBox(height: 12),
-                                        Text("40°")
-                                      ],
-                                    )
+                                    HourlyPrediction(
+                                        time: "18:00", temp: "40°"),
                                   ],
                                 ),
+                              ),
+                              SizedBox(
+                                height: 20,
                               ),
                               Row(
                                 children: [
@@ -221,14 +180,36 @@ class HomePage extends StatelessWidget {
                                     children: [
                                       Row(
                                         children: [
-                                          Text("Wind"),
+                                          Text("Wind",
+                                              style: TextStyle(fontSize: 20)),
+                                          SizedBox(
+                                            width: 4,
+                                          ),
                                           Image.asset(
                                             'assets/windy.png',
                                             height: 16,
+                                            width: 16,
                                           )
                                         ],
                                       ),
-                                      Text("8km/h")
+                                      SizedBox(
+                                        height: 10,
+                                      ),
+                                      Row(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.baseline,
+                                        textBaseline: TextBaseline.alphabetic,
+                                        children: [
+                                          Text(
+                                            "8",
+                                            style: TextStyle(fontSize: 60),
+                                          ),
+                                          Text(
+                                            "Km/h",
+                                            style: TextStyle(fontSize: 20),
+                                          )
+                                        ],
+                                      )
                                     ],
                                   ),
                                   SizedBox(
@@ -240,14 +221,36 @@ class HomePage extends StatelessWidget {
                                     children: [
                                       Row(
                                         children: [
-                                          Text("Humidity"),
+                                          Text("Humidity",
+                                              style: TextStyle(fontSize: 20)),
+                                          SizedBox(
+                                            width: 4,
+                                          ),
                                           Image.asset(
                                             'assets/humidity.png',
                                             height: 16,
+                                            width: 16,
                                           )
                                         ],
                                       ),
-                                      Text("24%"),
+                                      SizedBox(
+                                        height: 10,
+                                      ),
+                                      Row(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.baseline,
+                                        textBaseline: TextBaseline.alphabetic,
+                                        children: [
+                                          Text(
+                                            "24",
+                                            style: TextStyle(fontSize: 60),
+                                          ),
+                                          Text(
+                                            "%",
+                                            style: TextStyle(fontSize: 20),
+                                          )
+                                        ],
+                                      )
                                     ],
                                   ),
                                 ],
@@ -264,6 +267,34 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+class HourlyPrediction extends StatelessWidget {
+  const HourlyPrediction({Key? key, required this.time, required this.temp})
+      : super(key: key);
+
+  final String time;
+  final String temp;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Text(
+          time,
+          style: TextStyle(fontSize: 14, fontWeight: FontWeight.w200),
+        ),
+        SizedBox(height: 20),
+        Image.asset(
+          'assets/sunny.png',
+          width: 28,
+          height: 28,
+        ),
+        SizedBox(height: 12),
+        Text(temp, style: TextStyle(fontSize: 14))
+      ],
     );
   }
 }
